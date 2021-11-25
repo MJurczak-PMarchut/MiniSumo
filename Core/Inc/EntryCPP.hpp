@@ -12,14 +12,7 @@ extern "C" {
 #endif
 #include "Configuration.h"
 
-
-
 void main_cpp(void);
-
-
-
-
-
 
 
 #ifdef __cplusplus
