@@ -80,12 +80,12 @@ void Error_Handler(void);
 #define MD_DIS_2_GPIO_Port GPIOD
 #define MD_IN2_DIR_B_Pin GPIO_PIN_13
 #define MD_IN2_DIR_B_GPIO_Port GPIOD
-#define MD_IN1_PWM_B_Pin GPIO_PIN_14
-#define MD_IN1_PWM_B_GPIO_Port GPIOD
+#define MD_IN2_PWM_B_Pin GPIO_PIN_14
+#define MD_IN2_PWM_B_GPIO_Port GPIOD
 #define MD_NDIS_Pin GPIO_PIN_15
 #define MD_NDIS_GPIO_Port GPIOD
-#define MD_IN1_PWM_A_Pin GPIO_PIN_6
-#define MD_IN1_PWM_A_GPIO_Port GPIOC
+#define MD_IN2_PWM_A_Pin GPIO_PIN_6
+#define MD_IN2_PWM_A_GPIO_Port GPIOC
 #define MD_IN2_DIR_A_Pin GPIO_PIN_7
 #define MD_IN2_DIR_A_GPIO_Port GPIOC
 #define MD_DIS_1_Pin GPIO_PIN_8
