@@ -72,6 +72,7 @@ void Error_Handler(void);
 #define XSHUT_3_GPIO_Port GPIOE
 #define TOF_GPIO_4_Pin GPIO_PIN_15
 #define TOF_GPIO_4_GPIO_Port GPIOE
+#define TOF_GPIO_4_EXTI_IRQn EXTI15_10_IRQn
 #define XSHUT_4_Pin GPIO_PIN_10
 #define XSHUT_4_GPIO_Port GPIOB
 #define MD_CS_2_Pin GPIO_PIN_11
@@ -94,12 +95,17 @@ void Error_Handler(void);
 #define MD_CS_1_GPIO_Port GPIOA
 #define TOF_GPIO_2_Pin GPIO_PIN_11
 #define TOF_GPIO_2_GPIO_Port GPIOA
+#define TOF_GPIO_2_EXTI_IRQn EXTI15_10_IRQn
 #define XSHUT_2_Pin GPIO_PIN_12
 #define XSHUT_2_GPIO_Port GPIOA
+#define TOF_GPIO_5_Pin GPIO_PIN_10
+#define TOF_GPIO_5_GPIO_Port GPIOC
+#define TOF_GPIO_5_EXTI_IRQn EXTI15_10_IRQn
 #define XSHUT_5_Pin GPIO_PIN_11
 #define XSHUT_5_GPIO_Port GPIOC
 #define TOF_GPIO_6_Pin GPIO_PIN_12
 #define TOF_GPIO_6_GPIO_Port GPIOC
+#define TOF_GPIO_6_EXTI_IRQn EXTI15_10_IRQn
 #define XSHUT_6_Pin GPIO_PIN_0
 #define XSHUT_6_GPIO_Port GPIOD
 /* USER CODE BEGIN Private defines */
