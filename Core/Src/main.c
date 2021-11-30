@@ -53,6 +53,7 @@ TIM_HandleTypeDef htim4;
 
 UART_HandleTypeDef huart4;
 UART_HandleTypeDef huart7;
+DMA_HandleTypeDef hdma_uart7_rx;
 
 /* USER CODE BEGIN PV */
 
@@ -70,6 +71,7 @@ static void MX_UART4_Init(void);
 static void MX_UART7_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM4_Init(void);
+static void MX_DMA_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
@@ -120,6 +122,7 @@ int main(void)
   MX_UART7_Init();
   MX_TIM3_Init();
   MX_TIM4_Init();
+  MX_DMA_Init();
   MX_TIM2_Init();
 
   /* Initialize interrupts */
@@ -130,6 +133,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  HAL_UART_MspInit(&huart7);
   HAL_TIM_Base_Start_IT(&htim2);
   HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_2);
@@ -248,6 +252,9 @@ static void MX_NVIC_Init(void)
   /* TIM2_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(TIM2_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(TIM2_IRQn);
+  /* UART7_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(UART7_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(UART7_IRQn);
 }
 
 /**
@@ -713,6 +720,25 @@ static void MX_UART7_Init(void)
 }
 
 /**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Stream0_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream0_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream0_IRQn);
+  /* DMAMUX1_OVR_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMAMUX1_OVR_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMAMUX1_OVR_IRQn);
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -730,7 +756,10 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOE, __IN2_L_Pin|__IN1_L_Pin|XSHUT_3_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOE, __IN2_L_Pin|__IN1_L_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(XSHUT_3_GPIO_Port, XSHUT_3_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(XSHUT_4_GPIO_Port, XSHUT_4_Pin, GPIO_PIN_RESET);
@@ -745,10 +774,10 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOC, MD_IN2_DIR_A_Pin|XSHUT_5_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, MD_DIS_1_Pin|__IN2_R_Pin|__IN1_R_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(MD_DIS_1_GPIO_Port, MD_DIS_1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(MD_CS_1_GPIO_Port, MD_CS_1_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, MD_CS_1_Pin|__IN2_R_Pin|__IN1_R_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pins : __IN2_L_Pin __IN1_L_Pin XSHUT_3_Pin */
   GPIO_InitStruct.Pin = __IN2_L_Pin|__IN1_L_Pin|XSHUT_3_Pin;
