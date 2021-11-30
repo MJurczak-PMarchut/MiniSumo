@@ -39,6 +39,7 @@
 									<listOptionValue builtIn="false" value="&quot;../SumoDrivers/Motor Control&quot;"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/ServoControl"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers"/>
+									<listOptionValue builtIn="false" value="../SumoDrivers/TLE5205"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.852039432" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -63,6 +64,7 @@
 									<listOptionValue builtIn="false" value="../SumoDrivers/ServoControl"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/ToF_sensors/core"/>
+									<listOptionValue builtIn="false" value="../SumoDrivers/TLE5205"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.248995693" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -87,6 +89,7 @@
 									<listOptionValue builtIn="false" value="../SumoDrivers/ServoControl"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/I-BUS"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers"/>
+									<listOptionValue builtIn="false" value="../SumoDrivers/TLE5205"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1361552880" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -109,7 +112,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="SumoDrivers"/>
+						<entry excluding="L9960T" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="SumoDrivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 					</sourceEntries>
@@ -152,6 +155,7 @@
 									<listOptionValue builtIn="false" value="&quot;../SumoDrivers/Motor Control&quot;"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/ServoControl"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers"/>
+									<listOptionValue builtIn="false" value="../SumoDrivers/TLE5205"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.1391502651" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -175,6 +179,7 @@
 									<listOptionValue builtIn="false" value="&quot;../SumoDrivers/Motor Control&quot;"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/ServoControl"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers"/>
+									<listOptionValue builtIn="false" value="../SumoDrivers/TLE5205"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.302111502" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -198,6 +203,7 @@
 									<listOptionValue builtIn="false" value="&quot;../SumoDrivers/Motor Control&quot;"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/ServoControl"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers"/>
+									<listOptionValue builtIn="false" value="../SumoDrivers/TLE5205"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1668692771" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
