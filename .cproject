@@ -174,12 +174,12 @@
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/L9960T"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/CommManager"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MiniSumo/SumoDrivers/I-BUS}&quot;"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/ToF_sensors"/>
 									<listOptionValue builtIn="false" value="&quot;../SumoDrivers/Motor Control&quot;"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/ServoControl"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/TLE5205"/>
+									<listOptionValue builtIn="false" value="../SumoDrivers/I-BUS"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.302111502" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -198,12 +198,12 @@
 									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/L9960T"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/CommManager"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/MiniSumo/SumoDrivers/I-BUS}&quot;"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/ToF_sensors"/>
 									<listOptionValue builtIn="false" value="&quot;../SumoDrivers/Motor Control&quot;"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/ServoControl"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/TLE5205"/>
+									<listOptionValue builtIn="false" value="../SumoDrivers/I-BUS"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1668692771" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
