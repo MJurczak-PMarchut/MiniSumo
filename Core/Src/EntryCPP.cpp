@@ -8,7 +8,7 @@
 #include "RobotSpecificDefines.hpp"
 #include "TLE5205.hpp"
 #include "Configuration.h"
-#include "../../SumoDrivers/ToF_sensors/core/vl53l1x.hpp"
+#include "vl53l1x.hpp"
 #include "I-BUS.hpp"
 #ifdef __cplusplus
 extern "C" {
