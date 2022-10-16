@@ -105,7 +105,7 @@ void TxL9960TCompletedCB(struct MessageInfoTypeDef* MsgInfo)
 {
 	if(MsgInfo->context & (1<<MOTOR_LEFT))
 	{
-		if((uint16_t)MsgInfo->pRxData & (INIT_SEQUENCE_CONTEXT << 2))
+		if(*(uint16_t*)MsgInfo->pRxData & (INIT_SEQUENCE_CONTEXT << 2))
 		{
 			MOTOR_CONTROLLERS[MOTOR_LEFT].Init();
 		}
