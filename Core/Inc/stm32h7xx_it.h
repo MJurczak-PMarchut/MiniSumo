@@ -63,7 +63,6 @@ void TIM3_IRQHandler(void);
 void TIM4_IRQHandler(void);
 void EXTI15_10_IRQHandler(void);
 void UART7_IRQHandler(void);
-void DMAMUX1_OVR_IRQHandler(void);
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
@@ -73,5 +72,3 @@ void DMAMUX1_OVR_IRQHandler(void);
 #endif
 
 #endif /* __STM32H7xx_IT_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
