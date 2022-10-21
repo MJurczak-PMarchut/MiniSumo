@@ -46,10 +46,15 @@ uint16_t distance = 0;
 void main_cpp(void)
 {
 	MainCommManager.AttachCommInt(&hspi2);
+	MOTOR_CONTROLLERS[MOTOR_LEFT].Init();
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].Init();
+
 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorDirection(MOTOR_DIR_FORWARD);
 	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_FORWARD);
+
 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorPowerPWM(0);
 	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(0);
+
 	HAL_UARTEx_ReceiveToIdle_DMA(&huart7, pRx_Data, 40);
 	__HAL_DMA_DISABLE_IT(&hdma_uart7_rx, DMA_IT_HT);
 	while(1)
