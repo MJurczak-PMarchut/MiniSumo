@@ -41,19 +41,32 @@ IBus RxController(&huart7, EmStop, pRx_Data, &hdma_uart7_rx);
 MessageInfoTypeDef MsgInfo = {0};
 uint16_t distance = 0;
 
+void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+	MainCommManager.MsgReceivedCB(hspi);
+}
 
+void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+	MainCommManager.MsgReceivedCB(hspi);
+}
+
+void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+	MainCommManager.MsgReceivedCB(hspi);
+}
 
 void main_cpp(void)
 {
 	MainCommManager.AttachCommInt(&hspi2);
 	MOTOR_CONTROLLERS[MOTOR_LEFT].Init();
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].Init();
+//	MOTOR_CONTROLLERS[MOTOR_RIGHT].Init();
 
 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorDirection(MOTOR_DIR_FORWARD);
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_FORWARD);
+//	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_FORWARD);
 
 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorPowerPWM(0);
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(0);
+//	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(0);
 
 	HAL_UARTEx_ReceiveToIdle_DMA(&huart7, pRx_Data, 40);
 	__HAL_DMA_DISABLE_IT(&hdma_uart7_rx, DMA_IT_HT);
@@ -110,7 +123,7 @@ void TxL9960TCompletedCB(struct MessageInfoTypeDef* MsgInfo)
 {
 	if(MsgInfo->context & (1<<MOTOR_LEFT))
 	{
-		if(*(uint16_t*)MsgInfo->pRxData & (INIT_SEQUENCE_CONTEXT << 2))
+		if(MsgInfo->context & (INIT_SEQUENCE_CONTEXT << 2))
 		{
 			MOTOR_CONTROLLERS[MOTOR_LEFT].Init();
 		}
