@@ -16,6 +16,8 @@ extern "C" {
 #endif
 
 extern TIM_HandleTypeDef htim2;
+extern TIM_HandleTypeDef htim3;
+extern TIM_HandleTypeDef htim4;
 extern UART_HandleTypeDef huart7;
 extern I2C_HandleTypeDef hi2c1;
 extern SPI_HandleTypeDef hspi2;
@@ -34,7 +36,7 @@ void TxL9960TCompletedCB(struct MessageInfoTypeDef* MsgInfo);
 CommManager MainCommManager;
 L9960T MOTOR_CONTROLLERS[] = {
 		[MOTOR_LEFT] = L9960T(MOTOR_LEFT, &hspi2, &MainCommManager, RxL9960TCompletedCB, TxL9960TCompletedCB),
-		[MOTOR_RIGHT] = L9960T(MOTOR_LEFT, &hspi2, &MainCommManager, RxL9960TCompletedCB, TxL9960TCompletedCB)};
+		[MOTOR_RIGHT] = L9960T(MOTOR_RIGHT, &hspi2, &MainCommManager, RxL9960TCompletedCB, TxL9960TCompletedCB)};
 
 IBus RxController(&huart7, EmStop, pRx_Data, &hdma_uart7_rx);
 //VL53L1X vl53l1x = VL53L1X(&hi2c1, &MainCommManager);
@@ -60,13 +62,18 @@ void main_cpp(void)
 {
 	MainCommManager.AttachCommInt(&hspi2);
 	MOTOR_CONTROLLERS[MOTOR_LEFT].Init();
-//	MOTOR_CONTROLLERS[MOTOR_RIGHT].Init();
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].Init();
+	MOTOR_CONTROLLERS[MOTOR_LEFT].AttachPWMTimerAndChannel(&htim3, TIM_CHANNEL_1);
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].AttachPWMTimerAndChannel(&htim4, TIM_CHANNEL_3);
+
+	MOTOR_CONTROLLERS[MOTOR_LEFT].Enable();
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].Enable();
 
 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorDirection(MOTOR_DIR_FORWARD);
-//	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_FORWARD);
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_FORWARD);
 
-	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorPowerPWM(0);
-//	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(0);
+	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorPowerPWM(500);
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(500);
 
 	HAL_UARTEx_ReceiveToIdle_DMA(&huart7, pRx_Data, 40);
 	__HAL_DMA_DISABLE_IT(&hdma_uart7_rx, DMA_IT_HT);
@@ -130,7 +137,10 @@ void TxL9960TCompletedCB(struct MessageInfoTypeDef* MsgInfo)
 	}
 	else if(MsgInfo->context & (1<<MOTOR_RIGHT))
 	{
-
+		if(MsgInfo->context & (INIT_SEQUENCE_CONTEXT << 2))
+		{
+			MOTOR_CONTROLLERS[MOTOR_RIGHT].Init();
+		}
 	}
 }
 
