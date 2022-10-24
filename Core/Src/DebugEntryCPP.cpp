@@ -30,14 +30,12 @@ void EmStop(void);
 
 uint8_t pRx_Data[40] = {0};
 
-void RxL9960TCompletedCB(struct MessageInfoTypeDef* MsgInfo);
-void TxL9960TCompletedCB(struct MessageInfoTypeDef* MsgInfo);
 
 //TLE5205 MOTOR_CONTROLLERS[] = {[MOTOR_LEFT] = TLE5205(MOTOR_LEFT, &htim2, TIM_CHANNEL_1), [MOTOR_RIGHT] = TLE5205(MOTOR_RIGHT, &htim2, TIM_CHANNEL_2)};
 CommManager MainCommManager;
 L9960T MOTOR_CONTROLLERS[] = {
-		[MOTOR_LEFT] = L9960T(MOTOR_LEFT, &hspi2, &MainCommManager),
-		[MOTOR_RIGHT] = L9960T(MOTOR_RIGHT, &hspi2, &MainCommManager)};
+		[MOTOR_LEFT] = L9960T(MOTOR_LEFT, &hspi2, &MainCommManager, TIM_CHANNEL_1, &htim3),
+		[MOTOR_RIGHT] = L9960T(MOTOR_RIGHT, &hspi2, &MainCommManager, TIM_CHANNEL_3, &htim4)};
 
 IBus RxController(&huart7, EmStop, pRx_Data, &hdma_uart7_rx);
 //VL53L1X vl53l1x = VL53L1X(&hi2c1, &MainCommManager);
@@ -66,7 +64,8 @@ void main_cpp(void)
 {
 	MainCommManager.AttachCommInt(&hspi2);
 	InitControllers();
-
+	MOTOR_CONTROLLERS[MOTOR_LEFT].Enable();
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].Enable();
 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorDirection(MOTOR_DIR_FORWARD);
  	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_FORWARD);
 
@@ -92,23 +91,6 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   }
 }
 
-void RxL9960TCompletedCB(struct MessageInfoTypeDef* MsgInfo)
-{
-	if(MsgInfo->context & (1<<MOTOR_LEFT))
-	{
-
-	}
-	else if(MsgInfo->context & (1<<MOTOR_RIGHT))
-	{
-
-	}
-}
-
-void TxL9960TCompletedCB(struct MessageInfoTypeDef* MsgInfo)
-{
-
-}
-
 void EmStop(void)
 {
 
@@ -117,20 +99,13 @@ void EmStop(void)
 void InitControllers(void)
 {
 	HAL_GPIO_WritePin(MD_NDIS_GPIO_Port, MD_NDIS_Pin, GPIO_PIN_SET);
-	MOTOR_CONTROLLERS[MOTOR_LEFT].AttachPWMTimerAndChannel(&htim3, TIM_CHANNEL_1);
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].AttachPWMTimerAndChannel(&htim4, TIM_CHANNEL_3);
-	MOTOR_CONTROLLERS[MOTOR_LEFT].Disable();
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].Disable();
 	MOTOR_CONTROLLERS[MOTOR_LEFT].Init();
 	MOTOR_CONTROLLERS[MOTOR_RIGHT].Init();
 	while(MOTOR_CONTROLLERS[MOTOR_LEFT].CheckIfControllerInitializedOk() != HAL_OK)
 	{}
 	while(MOTOR_CONTROLLERS[MOTOR_RIGHT].CheckIfControllerInitializedOk() != HAL_OK)
 	{}
-	MOTOR_CONTROLLERS[MOTOR_LEFT].Enable();
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].Enable();
-	MOTOR_CONTROLLERS[MOTOR_LEFT].StartPWM();
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].StartPWM();
+
 }
 
 #ifdef __cplusplus
