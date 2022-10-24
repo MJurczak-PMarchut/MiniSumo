@@ -18,6 +18,7 @@ extern "C" {
 extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim4;
+extern TIM_HandleTypeDef htim15;
 extern UART_HandleTypeDef huart7;
 extern I2C_HandleTypeDef hi2c1;
 extern SPI_HandleTypeDef hspi2;
@@ -35,13 +36,16 @@ void TxL9960TCompletedCB(struct MessageInfoTypeDef* MsgInfo);
 //TLE5205 MOTOR_CONTROLLERS[] = {[MOTOR_LEFT] = TLE5205(MOTOR_LEFT, &htim2, TIM_CHANNEL_1), [MOTOR_RIGHT] = TLE5205(MOTOR_RIGHT, &htim2, TIM_CHANNEL_2)};
 CommManager MainCommManager;
 L9960T MOTOR_CONTROLLERS[] = {
-		[MOTOR_LEFT] = L9960T(MOTOR_LEFT, &hspi2, &MainCommManager, RxL9960TCompletedCB, TxL9960TCompletedCB),
-		[MOTOR_RIGHT] = L9960T(MOTOR_RIGHT, &hspi2, &MainCommManager, RxL9960TCompletedCB, TxL9960TCompletedCB)};
+		[MOTOR_LEFT] = L9960T(MOTOR_LEFT, &hspi2, &MainCommManager),
+		[MOTOR_RIGHT] = L9960T(MOTOR_RIGHT, &hspi2, &MainCommManager)};
 
 IBus RxController(&huart7, EmStop, pRx_Data, &hdma_uart7_rx);
 //VL53L1X vl53l1x = VL53L1X(&hi2c1, &MainCommManager);
 MessageInfoTypeDef MsgInfo = {0};
 uint16_t distance = 0;
+
+void InitControllers(void);
+
 
 void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)
 {
@@ -61,25 +65,16 @@ void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi)
 void main_cpp(void)
 {
 	MainCommManager.AttachCommInt(&hspi2);
-	MOTOR_CONTROLLERS[MOTOR_LEFT].Init();
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].Init();
-	MOTOR_CONTROLLERS[MOTOR_LEFT].AttachPWMTimerAndChannel(&htim3, TIM_CHANNEL_1);
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].AttachPWMTimerAndChannel(&htim4, TIM_CHANNEL_3);
-
-	MOTOR_CONTROLLERS[MOTOR_LEFT].Disable();
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].Disable();
+	InitControllers();
 
 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorDirection(MOTOR_DIR_FORWARD);
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_FORWARD);
+ 	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_FORWARD);
 
-	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorPowerPWM(500);
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(500);
-
+ 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorPowerPWM(999);
+ 	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(999);
 	HAL_UARTEx_ReceiveToIdle_DMA(&huart7, pRx_Data, 40);
 	__HAL_DMA_DISABLE_IT(&hdma_uart7_rx, DMA_IT_HT);
-	HAL_Delay(1000);
-	MOTOR_CONTROLLERS[MOTOR_LEFT].Init();
-	while(1)
+ 	 while(1)
 	{
 
 		if(huart7.RxState == HAL_UART_STATE_READY)
@@ -91,28 +86,9 @@ void main_cpp(void)
 }
 
 
-//void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim)
-//{
-//	if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1)
-//	{
-//		MOTOR_CONTROLLERS[MOTOR_LEFT].TimCBPulse();
-//	}
-//	else if(htim->Channel == HAL_TIM_ACTIVE_CHANNEL_2)
-//	{
-//		MOTOR_CONTROLLERS[MOTOR_RIGHT].TimCBPulse();
-//	}
-//}
-//
-//void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-//{
-//	MOTOR_CONTROLLERS[MOTOR_LEFT].TimCB();
-//	MOTOR_CONTROLLERS[MOTOR_RIGHT].TimCB();
-//}
-
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
   if (GPIO_Pin == TOF_GPIO_5_Pin) {
-//	  vl53l1x.GetDistance(TOF5);
   }
 }
 
@@ -130,25 +106,31 @@ void RxL9960TCompletedCB(struct MessageInfoTypeDef* MsgInfo)
 
 void TxL9960TCompletedCB(struct MessageInfoTypeDef* MsgInfo)
 {
-	if(MsgInfo->context & (1<<MOTOR_LEFT))
-	{
-		if(MsgInfo->context & (INIT_SEQUENCE_CONTEXT << 2))
-		{
-			MOTOR_CONTROLLERS[MOTOR_LEFT].Init();
-		}
-	}
-	else if(MsgInfo->context & (1<<MOTOR_RIGHT))
-	{
-		if(MsgInfo->context & (INIT_SEQUENCE_CONTEXT << 2))
-		{
-			MOTOR_CONTROLLERS[MOTOR_RIGHT].Init();
-		}
-	}
+
 }
 
 void EmStop(void)
 {
 
+}
+
+void InitControllers(void)
+{
+	HAL_GPIO_WritePin(MD_NDIS_GPIO_Port, MD_NDIS_Pin, GPIO_PIN_SET);
+	MOTOR_CONTROLLERS[MOTOR_LEFT].AttachPWMTimerAndChannel(&htim3, TIM_CHANNEL_1);
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].AttachPWMTimerAndChannel(&htim4, TIM_CHANNEL_3);
+	MOTOR_CONTROLLERS[MOTOR_LEFT].Disable();
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].Disable();
+	MOTOR_CONTROLLERS[MOTOR_LEFT].Init();
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].Init();
+	while(MOTOR_CONTROLLERS[MOTOR_LEFT].CheckIfControllerInitializedOk() != HAL_OK)
+	{}
+	while(MOTOR_CONTROLLERS[MOTOR_RIGHT].CheckIfControllerInitializedOk() != HAL_OK)
+	{}
+	MOTOR_CONTROLLERS[MOTOR_LEFT].Enable();
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].Enable();
+	MOTOR_CONTROLLERS[MOTOR_LEFT].StartPWM();
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].StartPWM();
 }
 
 #ifdef __cplusplus
