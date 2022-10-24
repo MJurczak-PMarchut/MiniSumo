@@ -817,7 +817,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : MD_CS_2_Pin */
   GPIO_InitStruct.Pin = MD_CS_2_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(MD_CS_2_GPIO_Port, &GPIO_InitStruct);
@@ -852,7 +852,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : MD_CS_1_Pin */
   GPIO_InitStruct.Pin = MD_CS_1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(MD_CS_1_GPIO_Port, &GPIO_InitStruct);
