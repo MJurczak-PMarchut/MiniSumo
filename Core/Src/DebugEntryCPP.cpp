@@ -7,7 +7,6 @@
 #include "EntryCPP.hpp"
 #include "RobotSpecificDefines.hpp"
 //#include "TLE5205.hpp"
-#include "cmsis_os.h"
 #include "Configuration.h"
 #include "vl53l1x.hpp"
 #include "I-BUS.hpp"
@@ -79,7 +78,7 @@ void main_cpp(void * pvParameters )
  		vTaskDelay(1000);
  		MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorDirection(MOTOR_DIR_BACKWARD);
  	 	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_BACKWARD);
- 	 	vTaskDelay(1000);
+ 	 	HAL_Delay(1000);
  		MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorDirection(MOTOR_DIR_FORWARD);
  	 	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_FORWARD);
 		if(huart7.RxState == HAL_UART_STATE_READY)
