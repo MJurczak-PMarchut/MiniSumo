@@ -178,7 +178,7 @@ int main(void)
   /* add threads, ... */
   TaskHandle_t xHandle = NULL;
 
-      /* Create the task, storing the handle. */
+  /* Create the task, storing the handle. */
   BaseType_t xReturned = xTaskCreate(
     		  	  	  main_cpp,       /* Function that implements the task. */
                       "NAME",          /* Text name for the task. */
