@@ -60,7 +60,7 @@ void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi)
 	MainCommManager.MsgReceivedCB(hspi);
 }
 
-void main_cpp(void)
+void main_cpp(void * pvParameters )
 {
 	MainCommManager.AttachCommInt(&hspi2);
 	InitControllers();

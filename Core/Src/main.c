@@ -176,6 +176,20 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
+  TaskHandle_t xHandle = NULL;
+
+      /* Create the task, storing the handle. */
+  BaseType_t xReturned = xTaskCreate(
+    		  	  	  main_cpp,       /* Function that implements the task. */
+                      "NAME",          /* Text name for the task. */
+                      512,      /* Stack size in words, not bytes. */
+                      ( void * ) 1,    /* Parameter passed into the task. */
+                      tskIDLE_PRIORITY,/* Priority at which the task is created. */
+                      &xHandle );
+  if(xReturned != pdPASS)
+  {
+	  Error_Handler();
+  }
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */

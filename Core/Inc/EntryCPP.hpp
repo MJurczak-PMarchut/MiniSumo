@@ -12,7 +12,7 @@ extern "C" {
 #endif
 #include "Configuration.h"
 
-void main_cpp(void);
+void main_cpp(void * pvParameters );
 
 
 #ifdef __cplusplus
