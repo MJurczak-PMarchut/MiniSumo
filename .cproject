@@ -33,6 +33,12 @@
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.includepaths.1357627382" name="Include paths (-I)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.includepaths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="../RobotDrivers/LineDetectors"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/Common"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/Platform"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/VL53L5CX_ULD_API/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/VL53L5CX_ULD_API/src"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L1/core"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L1/platform"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.852039432" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -61,6 +67,12 @@
 									<listOptionValue builtIn="false" value="../RobotDrivers"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/TLE5205"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/LineDetectors"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/Common"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/Platform"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/VL53L5CX_ULD_API/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/VL53L5CX_ULD_API/src"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L1/core"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L1/platform"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.248995693" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -90,6 +102,12 @@
 									<listOptionValue builtIn="false" value="../RobotDrivers"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/TLE5205"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/LineDetectors"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/Common"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/Platform"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/VL53L5CX_ULD_API/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/VL53L5CX_ULD_API/src"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L1/core"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L1/platform"/>
 								</option>
 								<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.languagestandard.284758790" name="Language standard" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.languagestandard" useByScannerDiscovery="true" value="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.languagestandard.value.gnupp17" valueType="enumerated"/>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1361552880" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
@@ -160,6 +178,12 @@
 									<listOptionValue builtIn="false" value="../SumoDrivers/TLE5205"/>
 									<listOptionValue builtIn="false" value="../SumoDrivers/ToF_sensors/core"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/LineDetectors"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/Common"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/Platform"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/VL53L5CX_ULD_API/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/VL53L5CX_ULD_API/src"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L1/core"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L1/platform"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.1391502651" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -188,6 +212,12 @@
 									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"/>
 									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/LineDetectors"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/Common"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/Platform"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/VL53L5CX_ULD_API/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/VL53L5CX_ULD_API/src"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L1/core"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L1/platform"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.302111502" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -217,6 +247,12 @@
 									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"/>
 									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/LineDetectors"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/Common"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/Platform"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/VL53L5CX_ULD_API/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L5/VL53L5CX_ULD_API/src"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L1/core"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors/VL53L1/platform"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1668692771" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
