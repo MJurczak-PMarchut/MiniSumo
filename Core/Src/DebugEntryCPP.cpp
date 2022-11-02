@@ -70,7 +70,6 @@ void main_cpp(void * pvParameters )
 	MainCommManager.AttachCommInt(&hspi2);
 	InitControllers();
 	InitLineDetectors();
-//	HAL_ADC_Start_DMA(&hadc2, data, 2);
 	MOTOR_CONTROLLERS[MOTOR_LEFT].Enable();
 	MOTOR_CONTROLLERS[MOTOR_RIGHT].Enable();
 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorDirection(MOTOR_DIR_BACKWARD);
