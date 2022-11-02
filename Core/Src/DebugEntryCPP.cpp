@@ -5,12 +5,11 @@
  *      Author: Mateusz
  */
 #include "EntryCPP.hpp"
-#include "RobotSpecificDefines.hpp"
-//#include "TLE5205.hpp"
-#include "Configuration.h"
-//#include "vl53l1x.hpp"
-#include "I-BUS.hpp"
-#include "L9960T.hpp"
+
+#include "../../RobotDrivers/Configuration.h"
+#include "../../RobotDrivers/I-BUS/I-BUS.hpp"
+#include "../../RobotDrivers/L9960T/L9960T.hpp"
+#include "../../RobotDrivers/RobotSpecificDefines.hpp"
 #ifdef __cplusplus
 extern "C" {
 #endif

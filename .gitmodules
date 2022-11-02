@@ -1,3 +1,3 @@
 [submodule "SumoDrivers"]
-	path = SumoDrivers
+	path = RobotDrivers
 	url = git@github.com:MJurczak-PMarchut/SumoDrivers.git
