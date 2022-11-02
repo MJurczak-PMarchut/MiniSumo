@@ -104,8 +104,8 @@ void EmStop(void)
 void InitControllers(void)
 {
 	HAL_GPIO_WritePin(MD_NDIS_GPIO_Port, MD_NDIS_Pin, GPIO_PIN_SET);
-	MOTOR_CONTROLLERS[MOTOR_LEFT].Init();
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].Init();
+	MOTOR_CONTROLLERS[MOTOR_LEFT].Init(0);
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].Init(0);
 	while(MOTOR_CONTROLLERS[MOTOR_LEFT].CheckIfControllerInitializedOk() != HAL_OK)
 	{}
 	while(MOTOR_CONTROLLERS[MOTOR_RIGHT].CheckIfControllerInitializedOk() != HAL_OK)
