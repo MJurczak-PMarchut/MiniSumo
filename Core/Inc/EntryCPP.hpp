@@ -7,10 +7,11 @@
 
 #ifndef INC_ENTRYCPP_HPP_
 #define INC_ENTRYCPP_HPP_
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-#include "Configuration.h"
+#include "../../RobotDrivers/Configuration.h"
 
 void main_cpp(void * pvParameters );
 

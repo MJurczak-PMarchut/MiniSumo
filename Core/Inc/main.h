@@ -62,6 +62,14 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define __IN1_L_Pin GPIO_PIN_6
 #define __IN1_L_GPIO_Port GPIOE
+#define V_LS1_Pin GPIO_PIN_4
+#define V_LS1_GPIO_Port GPIOA
+#define V_LS2_Pin GPIO_PIN_5
+#define V_LS2_GPIO_Port GPIOA
+#define V_LS3_Pin GPIO_PIN_6
+#define V_LS3_GPIO_Port GPIOA
+#define V_LS4_Pin GPIO_PIN_7
+#define V_LS4_GPIO_Port GPIOA
 #define START_SW_Pin GPIO_PIN_0
 #define START_SW_GPIO_Port GPIOB
 #define TOF_GPIO_3_Pin GPIO_PIN_9
