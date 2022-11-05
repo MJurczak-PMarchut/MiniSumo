@@ -49,6 +49,7 @@ LineDetectors LDLineDetectors(4);
 Sensor_vl53l5cx vl53l5cx = Sensor_vl53l5cx(FRONT_LEFT, &MainCommManager);
 MessageInfoTypeDef MsgInfo = {0};
 uint16_t distance = 0;
+HAL_StatusTypeDef transmit_status = HAL_ERROR;
 
 void InitControllers(void);
 void InitLineDetectors(void);
@@ -88,7 +89,6 @@ void HAL_I2C_MemRxCpltCallback(I2C_HandleTypeDef *hi2c){
 
 void main_cpp(void * pvParameters )
 {
-	HAL_StatusTypeDef transmit_status = HAL_ERROR;
 	uint8_t addr_prev = 0x52;
 	uint8_t addr = 0x56;
 	HAL_GPIO_WritePin(XSHUT_5_GPIO_Port, XSHUT_5_Pin,GPIO_PIN_SET);
@@ -104,7 +104,6 @@ void main_cpp(void * pvParameters )
 	MsgInfo.TransactionStatus = &transmit_status;
 	MsgInfo.uCommInt.hi2c = &hi2c1;
 	VL53L1X_SetI2CAddress(addr_prev, addr, &MainCommManager, &MsgInfo);
-	while(transmit_status != HAL_OK){}
 //	HAL_GPIO_WritePin(XSHUT_6_GPIO_Port, XSHUT_6_Pin,GPIO_PIN_SET);
 	transmit_status = HAL_ERROR;
 	MsgInfo.TransactionStatus = &transmit_status;
