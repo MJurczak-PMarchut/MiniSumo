@@ -46,7 +46,7 @@ L9960T MOTOR_CONTROLLERS[] = {
 IBus RxController(&huart7, EmStop, pRx_Data, &hdma_uart7_rx);
 LineDetectors LDLineDetectors(4);
 //VL53L1X vl53l1x = VL53L1X(&hi2c1, &MainCommManager);
-Sensor_vl53l5cx vl53l5cx = Sensor_vl53l5cx(FRONT_LEFT, &MainCommManager);
+VL53L5CX vl53l5cx = VL53L5CX(FRONT_LEFT, &MainCommManager);
 MessageInfoTypeDef MsgInfo = {0};
 uint16_t distance = 0;
 HAL_StatusTypeDef transmit_status = HAL_ERROR;
@@ -103,7 +103,7 @@ void main_cpp(void * pvParameters )
 	vTaskDelay(20);
 	MsgInfo.TransactionStatus = &transmit_status;
 	MsgInfo.uCommInt.hi2c = &hi2c1;
-	VL53L1X_SetI2CAddress(addr_prev, addr, &MainCommManager, &MsgInfo);
+//	VL53L1X_SetI2CAddress(addr_prev, addr, &MainCommManager, &MsgInfo);
 //	HAL_GPIO_WritePin(XSHUT_6_GPIO_Port, XSHUT_6_Pin,GPIO_PIN_SET);
 	transmit_status = HAL_ERROR;
 	MsgInfo.TransactionStatus = &transmit_status;
@@ -119,7 +119,7 @@ void main_cpp(void * pvParameters )
  	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(0);
 	HAL_UARTEx_ReceiveToIdle_DMA(&huart7, pRx_Data, 40);
 	__HAL_DMA_DISABLE_IT(&hdma_uart7_rx, DMA_IT_HT);
-	VL53L1X_SensorInit(addr, &MainCommManager, &MsgInfo);
+//	VL53L1X_SensorInit(addr, &MainCommManager, &MsgInfo);
  	 while(1)
 	{
  		vTaskDelay(10);
