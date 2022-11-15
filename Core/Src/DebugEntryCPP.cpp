@@ -89,8 +89,6 @@ void HAL_I2C_MemRxCpltCallback(I2C_HandleTypeDef *hi2c){
 
 void main_cpp(void * pvParameters )
 {
-	uint8_t addr_prev = 0x52;
-	uint8_t addr = 0x56;
 	HAL_GPIO_WritePin(XSHUT_5_GPIO_Port, XSHUT_5_Pin,GPIO_PIN_SET);
 	HAL_GPIO_WritePin(XSHUT_6_GPIO_Port, XSHUT_6_Pin,GPIO_PIN_SET);
 	vTaskDelay(10);
