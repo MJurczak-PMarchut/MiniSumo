@@ -13,6 +13,7 @@
 #include "LineDetectors.hpp"
 #include "vl53l5cx.hpp"
 #include "VL53L1X_api.hpp"
+#include "ToFSensor.hpp"
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -46,7 +47,7 @@ L9960T MOTOR_CONTROLLERS[] = {
 IBus RxController(&huart7, EmStop, pRx_Data, &hdma_uart7_rx);
 LineDetectors LDLineDetectors(4);
 //VL53L1X vl53l1x = VL53L1X(&hi2c1, &MainCommManager);
-Sensor_vl53l5cx vl53l5cx = Sensor_vl53l5cx(FRONT_LEFT, &MainCommManager);
+VL53L5CX Sensor = VL53L5CX(FRONT_LEFT, &MainCommManager, &hi2c1);
 MessageInfoTypeDef MsgInfo = {0};
 uint16_t distance = 0;
 HAL_StatusTypeDef transmit_status = HAL_ERROR;
@@ -89,27 +90,11 @@ void HAL_I2C_MemRxCpltCallback(I2C_HandleTypeDef *hi2c){
 
 void main_cpp(void * pvParameters )
 {
-	uint8_t addr_prev = 0x52;
-	uint8_t addr = 0x56;
-	HAL_GPIO_WritePin(XSHUT_5_GPIO_Port, XSHUT_5_Pin,GPIO_PIN_SET);
-	HAL_GPIO_WritePin(XSHUT_6_GPIO_Port, XSHUT_6_Pin,GPIO_PIN_SET);
-	vTaskDelay(10);
-	HAL_GPIO_WritePin(XSHUT_5_GPIO_Port, XSHUT_5_Pin,GPIO_PIN_RESET);
-//	HAL_GPIO_WritePin(XSHUT_6_GPIO_Port, XSHUT_6_Pin,GPIO_PIN_RESET);
 	MainCommManager.AttachCommInt(&hspi2);
 	MainCommManager.AttachCommInt(&hi2c1);
+	ToF_Sensor::StartSensorTask();
 	InitControllers();
 	InitLineDetectors();
-	vTaskDelay(20);
-	MsgInfo.TransactionStatus = &transmit_status;
-	MsgInfo.uCommInt.hi2c = &hi2c1;
-	VL53L1X_SetI2CAddress(addr_prev, addr, &MainCommManager, &MsgInfo);
-//	HAL_GPIO_WritePin(XSHUT_6_GPIO_Port, XSHUT_6_Pin,GPIO_PIN_SET);
-	transmit_status = HAL_ERROR;
-	MsgInfo.TransactionStatus = &transmit_status;
-//	VL53L1X_SetI2CAddress(0x52, 0x54, &MainCommManager, &MsgInfo);
-//	while(transmit_status != HAL_OK){}
-
 	MOTOR_CONTROLLERS[MOTOR_LEFT].Enable();
 	MOTOR_CONTROLLERS[MOTOR_RIGHT].Enable();
 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorDirection(MOTOR_DIR_BACKWARD);
@@ -117,9 +102,6 @@ void main_cpp(void * pvParameters )
 
  	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorPowerPWM(0);
  	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(0);
-	HAL_UARTEx_ReceiveToIdle_DMA(&huart7, pRx_Data, 40);
-	__HAL_DMA_DISABLE_IT(&hdma_uart7_rx, DMA_IT_HT);
-	VL53L1X_SensorInit(addr, &MainCommManager, &MsgInfo);
  	 while(1)
 	{
  		vTaskDelay(10);
@@ -136,7 +118,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 	if (GPIO_Pin == TOF_GPIO_6_Pin || GPIO_Pin == TOF_GPIO_5_Pin || GPIO_Pin == TOF_GPIO_4_Pin || GPIO_Pin == TOF_GPIO_3_Pin)
 	{
-
+		ToF_Sensor::EXTI_Callback_func(GPIO_Pin);
 	}
 }
 

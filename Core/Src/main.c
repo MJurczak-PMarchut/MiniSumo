@@ -127,6 +127,7 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
+  MX_DMA_Init();
   MX_GPIO_Init();
   MX_ADC1_Init();
   MX_ADC2_Init();
@@ -134,7 +135,6 @@ int main(void)
   MX_SPI2_Init();
   MX_UART4_Init();
   MX_UART7_Init();
-  MX_DMA_Init();
   MX_TIM2_Init();
   MX_TIM3_Init();
   MX_TIM4_Init();
@@ -144,12 +144,12 @@ int main(void)
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
   HAL_UART_MspInit(&huart7);
-  HAL_TIM_Base_Start_IT(&htim2);
-  HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_2);
-  HAL_TIM_Base_Start(&htim3);
-  HAL_TIM_Base_Start(&htim4);
-  HAL_TIM_Base_Start(&htim15);
+//  HAL_TIM_Base_Start_IT(&htim2);
+//  HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_1);
+//  HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_2);
+//  HAL_TIM_Base_Start(&htim3);
+//  HAL_TIM_Base_Start(&htim4);
+//  HAL_TIM_Base_Start(&htim15);
   __HAL_TIM_SET_COMPARE(&htim15, TIM_CHANNEL_1, 500);
   /* USER CODE END 2 */
 
@@ -184,7 +184,7 @@ int main(void)
   BaseType_t xReturned = xTaskCreate(
     		  	  	  main_cpp,       /* Function that implements the task. */
                       "NAME",          /* Text name for the task. */
-                      512,      /* Stack size in words, not bytes. */
+                      1024,      /* Stack size in words, not bytes. */
                       ( void * ) 1,    /* Parameter passed into the task. */
                       tskIDLE_PRIORITY,/* Priority at which the task is created. */
                       &xHandle );
@@ -312,15 +312,6 @@ void PeriphCommonClock_Config(void)
   */
 static void MX_NVIC_Init(void)
 {
-  /* DMA1_Stream0_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Stream0_IRQn, 5, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Stream0_IRQn);
-  /* DMA1_Stream1_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Stream1_IRQn, 5, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Stream1_IRQn);
-  /* DMA1_Stream2_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Stream2_IRQn, 5, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Stream2_IRQn);
   /* EXTI15_10_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(EXTI15_10_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
@@ -333,18 +324,21 @@ static void MX_NVIC_Init(void)
   /* EXTI9_5_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(EXTI9_5_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
-  /* TIM4_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(TIM4_IRQn, 5, 0);
-  HAL_NVIC_EnableIRQ(TIM4_IRQn);
-  /* TIM3_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(TIM3_IRQn, 5, 0);
-  HAL_NVIC_EnableIRQ(TIM3_IRQn);
   /* TIM15_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(TIM15_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(TIM15_IRQn);
   /* I2C1_EV_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(I2C1_EV_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(I2C1_EV_IRQn);
+  /* DMA1_Stream2_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream2_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream2_IRQn);
+  /* DMA1_Stream1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream1_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream1_IRQn);
+  /* DMA1_Stream0_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream0_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream0_IRQn);
 }
 
 /**
