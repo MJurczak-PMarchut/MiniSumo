@@ -12,6 +12,7 @@
 #include "RobotSpecificDefines.hpp"
 #include "LineDetectors.hpp"
 #include "vl53l5cx.hpp"
+#include "algo.hpp"
 #include "VL53L1X_api.hpp"
 #include "ToFSensor.hpp"
 #ifdef __cplusplus
@@ -47,7 +48,7 @@ L9960T MOTOR_CONTROLLERS[] = {
 IBus RxController(&huart7, EmStop, pRx_Data, &hdma_uart7_rx);
 LineDetectors LDLineDetectors(4);
 //VL53L1X vl53l1x = VL53L1X(&hi2c1, &MainCommManager);
-VL53L5CX Sensor = VL53L5CX(FRONT_LEFT, &MainCommManager, &hi2c1);
+VL53L5CX Sensors[] ={ VL53L5CX(FRONT_LEFT, &MainCommManager, &hi2c1)};
 MessageInfoTypeDef MsgInfo = {0};
 uint16_t distance = 0;
 HAL_StatusTypeDef transmit_status = HAL_ERROR;
@@ -104,11 +105,8 @@ void main_cpp(void * pvParameters )
  	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(0);
  	 while(1)
 	{
- 		vTaskDelay(10);
- 		FL =LDLineDetectors.GetDetectorValue(LD_FRONT_LEFT);
- 		FR =LDLineDetectors.GetDetectorValue(LD_FRONT_RIGHT);
- 		BL =LDLineDetectors.GetDetectorValue(LD_BACK_LEFT);
- 		BR =LDLineDetectors.GetDetectorValue(LD_BACK_RIGHT);
+ 		vTaskDelay(1);
+ 		algorithm();
 
 	}
 }
