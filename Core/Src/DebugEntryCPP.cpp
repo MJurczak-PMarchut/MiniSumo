@@ -21,10 +21,8 @@ extern "C" {
 
 extern ADC_HandleTypeDef hadc1;
 extern ADC_HandleTypeDef hadc2;
-extern TIM_HandleTypeDef htim2;
 extern TIM_HandleTypeDef htim3;
 extern TIM_HandleTypeDef htim4;
-extern TIM_HandleTypeDef htim15;
 extern UART_HandleTypeDef huart7;
 extern I2C_HandleTypeDef hi2c1;
 extern SPI_HandleTypeDef hspi2;
@@ -48,7 +46,7 @@ L9960T MOTOR_CONTROLLERS[] = {
 IBus RxController(&huart7, EmStop, pRx_Data, &hdma_uart7_rx);
 LineDetectors LDLineDetectors(4);
 //VL53L1X vl53l1x = VL53L1X(&hi2c1, &MainCommManager);
-VL53L5CX Sensors[] ={ VL53L5CX(FRONT_LEFT, &MainCommManager, &hi2c1)};
+VL53L5CX Sensors[] ={ VL53L5CX(FRONT_LEFT, &MainCommManager, &hi2c1), VL53L5CX(FRONT_LEFT, &MainCommManager, &hi2c1), VL53L5CX(FRONT_LEFT, &MainCommManager, &hi2c1) };
 MessageInfoTypeDef MsgInfo = {0};
 uint16_t distance = 0;
 HAL_StatusTypeDef transmit_status = HAL_ERROR;
@@ -89,12 +87,16 @@ void HAL_I2C_MemRxCpltCallback(I2C_HandleTypeDef *hi2c){
 	MainCommManager.MsgReceivedCB(hi2c);
 }
 
+void InitSensors(void)
+{
+	ToF_Sensor::StartSensorTask();
+}
+
 void main_cpp(void * pvParameters )
 {
 	MainCommManager.AttachCommInt(&hspi2);
 	MainCommManager.AttachCommInt(&hi2c1);
-	ToF_Sensor::StartSensorTask();
-	InitControllers();
+//	InitControllers();
 	InitLineDetectors();
 	MOTOR_CONTROLLERS[MOTOR_LEFT].Enable();
 	MOTOR_CONTROLLERS[MOTOR_RIGHT].Enable();
@@ -114,7 +116,7 @@ void main_cpp(void * pvParameters )
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	if (GPIO_Pin == TOF_GPIO_6_Pin || GPIO_Pin == TOF_GPIO_5_Pin || GPIO_Pin == TOF_GPIO_4_Pin || GPIO_Pin == TOF_GPIO_3_Pin)
+	if (GPIO_Pin == TOF_GPIO_6_Pin || GPIO_Pin == TOF_GPIO_5_Pin || GPIO_Pin == TOF_GPIO_4_Pin || GPIO_Pin == TOF_GPIO_3_Pin || GPIO_Pin == TOF_GPIO_2_Pin)
 	{
 		ToF_Sensor::EXTI_Callback_func(GPIO_Pin);
 	}
