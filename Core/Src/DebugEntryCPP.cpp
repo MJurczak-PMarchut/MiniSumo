@@ -96,7 +96,7 @@ void main_cpp(void * pvParameters )
 {
 	MainCommManager.AttachCommInt(&hspi2);
 	MainCommManager.AttachCommInt(&hi2c1);
-//	InitControllers();
+	InitControllers();
 	InitLineDetectors();
 	MOTOR_CONTROLLERS[MOTOR_LEFT].Enable();
 	MOTOR_CONTROLLERS[MOTOR_RIGHT].Enable();
@@ -131,9 +131,9 @@ void InitControllers(void)
 {
 	HAL_GPIO_WritePin(MD_NDIS_GPIO_Port, MD_NDIS_Pin, GPIO_PIN_SET);
 	MOTOR_CONTROLLERS[MOTOR_LEFT].Init(0);
-	MOTOR_CONTROLLERS[MOTOR_RIGHT].Init(0);
 	while(MOTOR_CONTROLLERS[MOTOR_LEFT].CheckIfControllerInitializedOk() != HAL_OK)
 	{}
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].Init(0);
 	while(MOTOR_CONTROLLERS[MOTOR_RIGHT].CheckIfControllerInitializedOk() != HAL_OK)
 	{}
 
