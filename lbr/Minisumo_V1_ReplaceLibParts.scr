@@ -1,0 +1,652 @@
+# 'EAGLE Version 9.6.2 Copyright (c) 1988-2020 Autodesk, Inc.;
+
+SET UNDO_LOG OFF;
+# Take all libraries out of use
+USE -*;
+#
+# SHEET 1 - MIGRATE PARTS
+#
+EDIT .s1
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+REPLACE SUPPLY36 +3.3V;
+REPLACE SUPPLY37 +3.3V;
+REPLACE SUPPLY38 +3.3V;
+REPLACE SUPPLY39 +3.3V;
+REPLACE SUPPLY40 +3.3V;
+REPLACE SUPPLY41 +3.3V;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+REPLACE SV1 MA07-1;
+REPLACE SV2 MA07-1;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+REPLACE SV3 MA07-1:1;
+REPLACE SV4 MA07-1:1;
+REPLACE SV5 MA07-1:1;
+REPLACE SV6 MA07-1:1;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+REPLACE FRAME2 A4L-LOC;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+#
+# SHEET 2 - MIGRATE PARTS
+#
+EDIT .s2
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+REPLACE C1 GRM155R71C104KA88D0402;
+REPLACE C2 GRM155R71C104KA88D0402;
+REPLACE C3 GRM155R71C104KA88D0402;
+REPLACE C4 GRM155R71C104KA88D0402;
+REPLACE C5 GRM155R71C104KA88D0402;
+REPLACE C6 GRM155R71C104KA88D0402;
+REPLACE C7 GRM155R71C104KA88D0402;
+REPLACE C8 GRM155R71C104KA88D0402;
+REPLACE C27 GRM155R71C104KA88D0402;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+REPLACE SUPPLY1 +3.3V;
+REPLACE SUPPLY7 +3.3V;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+REPLACE CR1 LD1086DT33TR;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+REPLACE FB1 MMZ1608Y601BTA00;
+REPLACE U$6 BAT_POW;
+REPLACE U$7 BAT_POW;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+REPLACE U$2 VDDA;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+REPLACE FRAME3 A3L-LOC;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+REPLACE C9 C-EUC0402;
+REPLACE C10 C-EUC0402;
+REPLACE C11 C-EUC0603;
+REPLACE C12 C-EUC0603;
+REPLACE C13 C-EUC0603;
+REPLACE C14 C-EUC0603;
+REPLACE C16 C-EUC0603;
+REPLACE C17 C-EUC0603;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+REPLACE GND6 GND;
+REPLACE GND7 GND;
+REPLACE GND8 GND;
+REPLACE GND9 GND;
+REPLACE GND12 GND;
+REPLACE GND15 GND;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+#
+# SHEET 3 - MIGRATE PARTS
+#
+EDIT .s3
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+REPLACE C15 GRM155R71C104KA88D0402;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+REPLACE Y1 ECS-3225MV;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+REPLACE J1 FTSH-107-01-L-DV-K-TR;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+REPLACE SUPPLY2 +3.3V;
+REPLACE SUPPLY3 +3.3V;
+REPLACE SUPPLY4 +3.3V;
+REPLACE SUPPLY5 +3.3V;
+REPLACE SUPPLY6 +3.3V;
+REPLACE SUPPLY8 +3.3V;
+REPLACE SUPPLY9 +3.3V;
+REPLACE SUPPLY10 +3.3V;
+REPLACE SUPPLY18 +3.3V;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+REPLACE IC1 STM32H743VIT6NORMAL;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+REPLACE U$1 VDDA;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+REPLACE FRAME1 A3L-LOC;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+REPLACE SJ1 SJ2W;
+REPLACE SJ2 SJ2W;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+REPLACE R1 R-EU_R0402;
+REPLACE R2 R-EU_R0402;
+REPLACE R3 R-EU_R0402;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+REPLACE GND1 GND;
+REPLACE GND2 GND;
+REPLACE GND3 GND;
+REPLACE GND4 GND;
+REPLACE GND5 GND;
+REPLACE GND10 GND;
+REPLACE GND11 GND;
+REPLACE GND13 GND;
+REPLACE GND14 GND;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+#
+# SHEET 4 - MIGRATE PARTS
+#
+EDIT .s4
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+REPLACE C18 GRM155R71C104KA88D0402;
+REPLACE C19 GRM155R71C104KA88D0402;
+REPLACE C20 GRM155R71C104KA88D0402;
+REPLACE C21 GRM155R71C104KA88D0402;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+REPLACE SUPPLY35 +3.3V;
+REPLACE SUPPLY44 +3.3V;
+REPLACE SUPPLY45 +3.3V;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+REPLACE D1 STPS5L60S;
+REPLACE D2 SMA6T33AY;
+REPLACE U$4 MD_OUT;
+REPLACE U$5 MD_OUT;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+REPLACE FRAME4 A5L-LOC;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+REPLACE U$3 L9960T;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+REPLACE C22 C-EUC0402;
+REPLACE C23 C-EUC0402;
+REPLACE C24 C-EUC1210;
+REPLACE C25 CPOL-EUUD-8X10;
+REPLACE C26 CPOL-EUUD-8X10;
+REPLACE R12 R-EU_R0402;
+REPLACE R13 R-EU_R0402;
+REPLACE R14 R-EU_R0402;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+REPLACE SUPPLY11 GND:1;
+REPLACE SUPPLY12 GND:1;
+REPLACE SUPPLY13 GND:1;
+REPLACE SUPPLY14 GND:1;
+REPLACE SUPPLY15 GND:1;
+REPLACE SUPPLY16 GND:1;
+REPLACE SUPPLY17 GND:1;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+#
+# SHEET 5 - MIGRATE PARTS
+#
+EDIT .s5
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+REPLACE CZ1 KTIR0711S;
+REPLACE CZ2 KTIR0711S;
+REPLACE CZ3 KTIR0711S;
+REPLACE CZ4 KTIR0711S;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+REPLACE SUPPLY21 +3.3V;
+REPLACE SUPPLY22 +3.3V;
+REPLACE SUPPLY25 +3.3V;
+REPLACE SUPPLY26 +3.3V;
+REPLACE SUPPLY29 +3.3V;
+REPLACE SUPPLY30 +3.3V;
+REPLACE SUPPLY33 +3.3V;
+REPLACE SUPPLY34 +3.3V;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+REPLACE FRAME5 A4L-LOC;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+REPLACE R4 R-EU_R0402;
+REPLACE R5 R-EU_R0402;
+REPLACE R6 R-EU_R0402;
+REPLACE R7 R-EU_R0402;
+REPLACE R8 R-EU_R0402;
+REPLACE R9 R-EU_R0402;
+REPLACE R10 R-EU_R0402;
+REPLACE R11 R-EU_R0402;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+REPLACE SUPPLY19 GND:1;
+REPLACE SUPPLY20 GND:1;
+REPLACE SUPPLY23 GND:1;
+REPLACE SUPPLY24 GND:1;
+REPLACE SUPPLY27 GND:1;
+REPLACE SUPPLY28 GND:1;
+REPLACE SUPPLY31 GND:1;
+REPLACE SUPPLY32 GND:1;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+#
+# SHEET 6 - MIGRATE PARTS
+#
+EDIT .s6
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+REPLACE SUPPLY43 +3.3V;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+REPLACE SV7 MA04-1;
+REPLACE SV8 MA03-1;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+REPLACE FRAME6 A5L-LOC;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+REPLACE SUPPLY42 GND:1;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+#
+# SHEET 7 - MIGRATE PARTS
+#
+EDIT .s7
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/AcceleratedDesigns_Lib.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ECS-3225MV.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/FTSH-107-01-L-DV-K-TR.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/KTIR0711S.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/Power_Symbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/ST_Power.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SamacSys_Parts.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/SparkFun-PowerSymbols.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/con-lstb@1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+REPLACE FRAME7 A5L-LOC;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/frames.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/jumper.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/l9960.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/rcl.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply1.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/supply2.lbr';
+# Migrate parts to 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr'
+USE 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+REPLACE 3V3 SMD2;
+REPLACE GND SMD2;
+REPLACE IBUS_RX SMD2;
+# Take 'C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr' out of use
+USE '-C:/Users/Mateusz/Documents/EAGLE/projects/Minisumo_mini/lbr/wirepad.lbr';
+EDIT .s1
+SET UNDO_LOG ON;
+# Put all libraries back into use
+USE *;
