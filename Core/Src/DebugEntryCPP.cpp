@@ -46,7 +46,11 @@ L9960T MOTOR_CONTROLLERS[] = {
 IBus RxController(&huart7, EmStop, pRx_Data, &hdma_uart7_rx);
 LineDetectors LDLineDetectors(4);
 //VL53L1X vl53l1x = VL53L1X(&hi2c1, &MainCommManager);
+#ifdef ROBOT_IS_TOMISLAW
+VL53L5CX Sensors[] ={ VL53L5CX(FRONT_LEFT, &MainCommManager, &hi2c1), VL53L5CX(FRONT_LEFT, &MainCommManager, &hi2c1) };
+#else
 VL53L5CX Sensors[] ={ VL53L5CX(FRONT_LEFT, &MainCommManager, &hi2c1), VL53L5CX(FRONT_LEFT, &MainCommManager, &hi2c1), VL53L5CX(FRONT_LEFT, &MainCommManager, &hi2c1) };
+#endif
 MessageInfoTypeDef MsgInfo = {0};
 uint16_t distance = 0;
 HAL_StatusTypeDef transmit_status = HAL_ERROR;
@@ -97,17 +101,25 @@ void main_cpp(void * pvParameters )
 	MainCommManager.AttachCommInt(&hspi2);
 	MainCommManager.AttachCommInt(&hi2c1);
 	InitControllers();
-	InitLineDetectors();
+//	InitLineDetectors();
 	MOTOR_CONTROLLERS[MOTOR_LEFT].Enable();
 	MOTOR_CONTROLLERS[MOTOR_RIGHT].Enable();
 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorDirection(MOTOR_DIR_BACKWARD);
  	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_BACKWARD);
-
- 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorPowerPWM(0);
- 	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(0);
+ 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorPowerPWM(999);
+ 	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(999);
+ 	vTaskDelay(100);
+	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorDirection(MOTOR_DIR_FORWARD);
+ 	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_FORWARD);
+ 	vTaskDelay(100);
+	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorDirection(MOTOR_DIR_BACKWARD);
+ 	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_BACKWARD);
+ 	vTaskDelay(100);
+// 	MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorPowerPWM(0);
+// 	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(0);
  	 while(1)
 	{
- 		vTaskDelay(1);
+ 		vTaskDelay(5);
  		algorithm();
 
 	}
@@ -119,6 +131,11 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	if (GPIO_Pin == TOF_GPIO_6_Pin || GPIO_Pin == TOF_GPIO_5_Pin || GPIO_Pin == TOF_GPIO_4_Pin || GPIO_Pin == TOF_GPIO_3_Pin || GPIO_Pin == TOF_GPIO_2_Pin)
 	{
 		ToF_Sensor::EXTI_Callback_func(GPIO_Pin);
+		if(GPIO_Pin == TOF_GPIO_4_Pin)
+		{
+			ToF_Sensor::EXTI_Callback_func(TOF_GPIO_2_Pin);
+			ToF_Sensor::EXTI_Callback_func(TOF_GPIO_5_Pin);
+		}
 	}
 }
 
