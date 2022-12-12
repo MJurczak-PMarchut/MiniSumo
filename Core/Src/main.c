@@ -137,7 +137,8 @@ int main(void)
   /* Initialize interrupts */
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
-  InitSensors();
+//  InitSensors();
+  HAL_UART_MspInit(&huart7);
   /* USER CODE END 2 */
 
   /* Init scheduler */
@@ -165,24 +166,29 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
-  TaskHandle_t xHandle = NULL;
 
-  /* Create the task, storing the handle. */
-  BaseType_t xReturned = xTaskCreate(
-    		  	  	  main_cpp,       /* Function that implements the task. */
-                      "NAME",          /* Text name for the task. */
-                      1024,      /* Stack size in words, not bytes. */
-                      ( void * ) 1,    /* Parameter passed into the task. */
-                      tskIDLE_PRIORITY,/* Priority at which the task is created. */
-                      &xHandle );
-  if(xReturned != pdPASS)
-  {
-	  Error_Handler();
-  }
+//  TaskHandle_t xHandle = NULL;
+//
+//  /* Create the task, storing the handle. */
+//  BaseType_t xReturned = xTaskCreate(
+//    		  	  	  main_cpp,       /* Function that implements the task. */
+//                      "NAME",          /* Text name for the task. */
+//                      1024,      /* Stack size in words, not bytes. */
+//                      ( void * ) 1,    /* Parameter passed into the task. */
+//                      tskIDLE_PRIORITY,/* Priority at which the task is created. */
+//                      &xHandle );
+//  if(xReturned != pdPASS)
+//  {
+//	  Error_Handler();
+//  }
+
   /* USER CODE END RTOS_THREADS */
 
   /* USER CODE BEGIN RTOS_EVENTS */
   /* add events, ... */
+  //start robot
+  main_cpp(NULL);
+
   /* USER CODE END RTOS_EVENTS */
 
   /* Start scheduler */

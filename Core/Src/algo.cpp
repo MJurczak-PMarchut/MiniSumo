@@ -102,7 +102,7 @@ void drive(int PWM_Right, int PWM_Left, bool R_forward, bool L_forward)
 		MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_FORWARD);
 	else
 		MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorDirection(MOTOR_DIR_BACKWARD);
-		MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(PWM_Right);
+	MOTOR_CONTROLLERS[MOTOR_RIGHT].SetMotorPowerPWM(PWM_Right);
 	if (L_forward)
 		MOTOR_CONTROLLERS[MOTOR_LEFT].SetMotorDirection(MOTOR_DIR_FORWARD);
 	else
