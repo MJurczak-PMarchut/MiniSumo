@@ -100,14 +100,6 @@ void main_cpp(void * pvParameters)
 }
 
 
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-	if (GPIO_Pin == TOF_GPIO_6_Pin || GPIO_Pin == TOF_GPIO_5_Pin || GPIO_Pin == TOF_GPIO_4_Pin || GPIO_Pin == TOF_GPIO_3_Pin || GPIO_Pin == TOF_GPIO_2_Pin)
-	{
-		ToF_Sensor::EXTI_Callback_func(GPIO_Pin);
-	}
-}
-
 void EmStop(void)
 {
 
