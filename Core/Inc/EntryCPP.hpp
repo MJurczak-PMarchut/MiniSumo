@@ -11,7 +11,6 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-#include "../../RobotDrivers/Configuration.h"
 
 void main_cpp(void * pvParameters );
 void InitSensors(void);

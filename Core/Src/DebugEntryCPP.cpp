@@ -94,7 +94,7 @@ void InitSensors(void)
 void main_cpp(void * pvParameters)
 {
 	MainCommManager.AttachCommInt(&hspi2);
-	MainCommManager.AttachCommInt(&hi2c1);
+	MainCommManager.AttachCommInt<I2C_HandleTypeDef>(&hi2c1);
 	ToF_Sensor::StartSensorTask();
 	ROBOT.run();
 }

@@ -79,6 +79,8 @@
 									<listOptionValue builtIn="false" value="../RobotDrivers/osapi"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/osapi/freertos"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/Algorithms/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/CommManager/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/CommManager/src"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.248995693" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -117,6 +119,7 @@
 									<listOptionValue builtIn="false" value="../RobotDrivers/osapi"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/osapi/freertos"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/Algorithms/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/CommManager/inc"/>
 								</option>
 								<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.languagestandard.284758790" name="Language standard" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.languagestandard" useByScannerDiscovery="true" value="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.languagestandard.value.gnupp17" valueType="enumerated"/>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1361552880" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
@@ -140,7 +143,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Src/EntryCPP.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
+						<entry excluding="Src/algo.cpp|Src/EntryCPP.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="RobotDrivers"/>
@@ -233,6 +236,8 @@
 									<listOptionValue builtIn="false" value="../RobotDrivers/osapi"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/osapi/freertos"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/Algorithms/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/CommManager/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/CommManager/src"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.302111502" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -271,6 +276,7 @@
 									<listOptionValue builtIn="false" value="../RobotDrivers/osapi"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/osapi/freertos"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/Algorithms/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/CommManager/inc"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1668692771" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -293,7 +299,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Src/EntryCPP.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
+						<entry excluding="Src/algo.cpp|Src/EntryCPP.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="RobotDrivers"/>
@@ -367,7 +373,6 @@
 									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/L9960T"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/I-BUS"/>
-									<listOptionValue builtIn="false" value="../RobotDrivers/CommManager"/>
 									<listOptionValue builtIn="false" value="&quot;../RobotDrivers/Motor Control&quot;"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/ServoControl"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers"/>
@@ -382,6 +387,8 @@
 									<listOptionValue builtIn="false" value="../RobotDrivers/osapi"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/osapi/freertos"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/Algorithms/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/CommManager/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/CommManager/src"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.117545162" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -404,7 +411,6 @@
 									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"/>
 									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/L9960T"/>
-									<listOptionValue builtIn="false" value="../RobotDrivers/CommManager"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/ToF_sensors"/>
 									<listOptionValue builtIn="false" value="&quot;../RobotDrivers/Motor Control&quot;"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/ServoControl"/>
@@ -421,6 +427,7 @@
 									<listOptionValue builtIn="false" value="../RobotDrivers/osapi"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/osapi/freertos"/>
 									<listOptionValue builtIn="false" value="../RobotDrivers/Algorithms/inc"/>
+									<listOptionValue builtIn="false" value="../RobotDrivers/CommManager/inc"/>
 								</option>
 								<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.languagestandard.170027374" name="Language standard" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.languagestandard" useByScannerDiscovery="true" value="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.languagestandard.value.gnupp17" valueType="enumerated"/>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1262719574" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
@@ -444,7 +451,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Src/EntryCPP.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
+						<entry excluding="Src/algo.cpp|Src/EntryCPP.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="RobotDrivers"/>
