@@ -123,7 +123,6 @@ int main(void)
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
-  MX_DMA_Init();
   MX_GPIO_Init();
   MX_ADC1_Init();
   MX_ADC2_Init();
@@ -131,6 +130,7 @@ int main(void)
   MX_SPI2_Init();
   MX_UART4_Init();
   MX_UART7_Init();
+  MX_DMA_Init();
   MX_TIM3_Init();
   MX_TIM4_Init();
 
@@ -311,9 +311,6 @@ static void MX_NVIC_Init(void)
   /* SPI2_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(SPI2_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(SPI2_IRQn);
-  /* I2C1_EV_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(I2C1_EV_IRQn, 5, 0);
-  HAL_NVIC_EnableIRQ(I2C1_EV_IRQn);
   /* EXTI15_10_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(EXTI15_10_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
@@ -329,12 +326,15 @@ static void MX_NVIC_Init(void)
   /* DMA1_Stream0_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream0_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream0_IRQn);
-  /* TIM3_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(TIM3_IRQn, 5, 0);
-  HAL_NVIC_EnableIRQ(TIM3_IRQn);
   /* TIM4_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(TIM4_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(TIM4_IRQn);
+  /* TIM3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(TIM3_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(TIM3_IRQn);
+  /* I2C1_EV_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(I2C1_EV_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(I2C1_EV_IRQn);
 }
 
 /**
@@ -908,19 +908,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(TOF_GPIO_5_GPIO_Port, &GPIO_InitStruct);
 
-#ifdef ROBOT_IS_TOMISLAW
   /*Configure GPIO pin : TOF_GPIO_6_Pin */
   GPIO_InitStruct.Pin = TOF_GPIO_6_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(TOF_GPIO_6_GPIO_Port, &GPIO_InitStruct);
-#else
-  /*Configure GPIO pin : TOF_GPIO_6_Pin */
-  GPIO_InitStruct.Pin = TOF_GPIO_6_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(TOF_GPIO_6_GPIO_Port, &GPIO_InitStruct);
-#endif
 
 }
 

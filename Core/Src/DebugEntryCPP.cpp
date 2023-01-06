@@ -49,7 +49,6 @@ CommManager MainCommManager;
 #elif ROBOT_IS_TOMISLAV
 
 #endif
-MessageInfoTypeDef MsgInfo = {0};
 uint16_t distance = 0;
 HAL_StatusTypeDef transmit_status = HAL_ERROR;
 
@@ -94,9 +93,10 @@ void InitSensors(void)
 void main_cpp(void * pvParameters)
 {
 	MainCommManager.AttachCommInt(&hspi2);
-	MainCommManager.AttachCommInt<I2C_HandleTypeDef>(&hi2c1);
+	MainCommManager.AttachCommInt(&hi2c1);
+	HAL_Delay(10);
 	ToF_Sensor::StartSensorTask();
-	ROBOT.run();
+//	ROBOT.run();
 }
 
 
