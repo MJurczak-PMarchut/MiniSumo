@@ -92,11 +92,9 @@ void InitSensors(void)
 
 void main_cpp(void * pvParameters)
 {
-	MainCommManager.AttachCommInt(&hspi2);
-	MainCommManager.AttachCommInt(&hi2c1);
-	HAL_Delay(10);
-	ToF_Sensor::StartSensorTask();
-//	ROBOT.run();
+	MainCommManager.AttachCommInt(&hspi2, COMM_INTERRUPT);
+	MainCommManager.AttachCommInt(&hi2c1, COMM_INTERRUPT);
+	ROBOT.run();
 }
 
 
