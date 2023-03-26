@@ -17,8 +17,8 @@
 #include "ToFSensor.hpp"
 #ifdef ROBOT_MT_V1
 #include "miniTomi.hpp"
-#elif ROBOT_IS_TOMISLAV
-
+#elif defined(ROBOT_STD_V1)
+#include "StandardTomi.hpp"
 #endif
 
 
@@ -44,11 +44,8 @@ uint8_t pRx_Data[40] = {0};
 
 CommManager MainCommManager;
 
-#ifdef ROBOT_MT_V1
-	miniTomi ROBOT = miniTomi();
-#elif ROBOT_IS_TOMISLAV
+Robot ROBOT = Robot();
 
-#endif
 uint16_t distance = 0;
 HAL_StatusTypeDef transmit_status = HAL_ERROR;
 
