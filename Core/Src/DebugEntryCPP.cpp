@@ -12,14 +12,9 @@
 #include "RobotSpecificDefines.hpp"
 #include "LineDetectors.hpp"
 #include "vl53l5cx.hpp"
-#include "algo.hpp"
 #include "VL53L1X_api.hpp"
 #include "ToFSensor.hpp"
-#ifdef ROBOT_MT_V1
-#include "miniTomi.hpp"
-#elif defined(ROBOT_STD_V1)
-#include "StandardTomi.hpp"
-#endif
+#include "Algo.hpp"
 
 
 #ifdef __cplusplus
@@ -82,6 +77,14 @@ void HAL_I2C_MemRxCpltCallback(I2C_HandleTypeDef *hi2c){
 	MainCommManager.MsgReceivedCB(hi2c);
 }
 
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart){
+	MainCommManager.MsgReceivedCB(huart);
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+	MainCommManager.MsgReceivedRxCB(huart);
+}
+
 void InitSensors(void)
 {
 
@@ -91,6 +94,7 @@ void main_cpp(void * pvParameters)
 {
 	MainCommManager.AttachCommInt(&hspi2, COMM_INTERRUPT);
 	MainCommManager.AttachCommInt(&hi2c1, COMM_INTERRUPT);
+	MainCommManager.AttachCommInt(&huart7, COMM_INTERRUPT);
 	ROBOT.run();
 }
 

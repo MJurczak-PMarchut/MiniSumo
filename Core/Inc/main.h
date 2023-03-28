@@ -117,6 +117,7 @@ void Error_Handler(void);
 #define TOF_GPIO_6_EXTI_IRQn EXTI15_10_IRQn
 #define XSHUT_6_Pin GPIO_PIN_0
 #define XSHUT_6_GPIO_Port GPIOD
+
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
