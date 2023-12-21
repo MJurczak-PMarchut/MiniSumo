@@ -152,10 +152,10 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="RobotDrivers"/>
 						<entry excluding="Src/algo.cpp|Src/EntryCPP.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
+						<entry excluding="Oled" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="RobotDrivers"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -317,10 +317,10 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="RobotDrivers"/>
 						<entry excluding="Src/algo.cpp|Src/EntryCPP.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
+						<entry excluding="Oled" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="RobotDrivers"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -479,9 +479,9 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry excluding="Src/algo.cpp|Src/EntryCPP.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
-						<entry excluding="VESC" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="RobotDrivers"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
+						<entry excluding="Oled|VESC" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="RobotDrivers"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -639,10 +639,10 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="RobotDrivers"/>
 						<entry excluding="Src/algo.cpp|Src/EntryCPP.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
+						<entry excluding="Oled" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="RobotDrivers"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -802,9 +802,9 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry excluding="Src/algo.cpp|Src/EntryCPP.cpp" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
-						<entry excluding="VESC" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="RobotDrivers"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
+						<entry excluding="Oled|VESC" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="RobotDrivers"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
